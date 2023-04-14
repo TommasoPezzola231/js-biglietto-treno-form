@@ -18,11 +18,13 @@ let codice = document.getElementById("codice");
 
 let costo = document.getElementById("costo");
 
-let prezzo = distanza.value * tariffa;
+let prezzo = null;
 
 genera.addEventListener("click",
     function() {
        passeggero.innerText = nome.value;
+       
+       prezzo = distanza.value * tariffa;
 
        if (eta.value == "Minorenne") {
         offerta.innerText = "Biglietto Scontato"
@@ -38,6 +40,6 @@ genera.addEventListener("click",
 
        codice.innerText = Math.ceil(Math.random() * 100000);
 
-       costo.innerText = prezzo;
+       costo.innerText = prezzo + `€`;
     }
     )
