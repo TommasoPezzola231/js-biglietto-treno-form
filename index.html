@@ -9,45 +9,84 @@
 </head>
 <body>
 
-    <!--Calcolatore prezzo biglietto-->
-    <div>
-        <input type="text" name="" id="nomeUtente" placeholder="Nome">
-        <input type="number" name="" id="distanza" placeholder="Distanza">
-        <select name="" id="eta">
-            <option value="Minorenne">Minorenne</option>
-            <option value="Maggiorenne">Maggiorenne</option>
-            <option value="Over 65">Over 65</option>
-        </select>
-        <button id="genera">Genera</button>
-    </div>
+    <header>
+        <div class="col-8 mx-auto">
+            <img class="mx-auto my-3 w-100" src="https://upload.wikimedia.org/wikipedia/it/4/4f/Treno_Frecciarossa_Logo.png" alt="">
+        </div>
+    </header>
 
-    <!--Biglietto-->
-    <div>
-        <span>
-            <p class="text-danger">Nome Passeggero</p>
-            <p id="passeggero"></p>
-        </span>
+    <main>
+        <!--Calcolatore prezzo biglietto-->
+        <section>
+            <div class="d-flex flex-wrap">
 
-        <span>
-            <p class="text-danger">Offerta</p>
-            <p id="offerta"></p>
-        </span>
+                <div class="col-12 text-center my-4">
+                    <h2>CALCOLA ORA IL PREZZO DEL TUO BIGLIETTO!</h2>
+                </div>
 
-        <span>
-            <p class="text-danger">Carrozza</p>
-            <p id="carrozza"></p>
-        </span>
+                <div class="col-4 text-center fs-5">
+                    <p class="fw-bold">Inserisci il nome del passeggero</p>
+                    <input type="text" name="" id="nomeUtente" placeholder="Nome">
+                </div>
 
-        <span>
-            <p class="text-danger">Codice CP</p>
-            <p id="codice"></p>
-        </span>
+                <div class="col-4 text-center fs-5">
+                    <p class="fw-bold">Inserisci la distanza da percorrere</p>
+                    <input type="number" name="" id="distanza" placeholder="Distanza">
+                </div>
 
-        <span>
-            <p class="text-danger">Prezzo</p>
-            <p id="costo"></p>
-        </span>
-    </div>
+                <div class="col-4 text-center fs-5">
+                    <p class="fw-bold">Inserisci l'età</p>
+                    <select name="" id="eta">
+                        <option value="Minorenne">Minorenne</option>
+                        <option value="Maggiorenne">Maggiorenne</option>
+                        <option value="Over 65">Over 65</option>
+                    </select>
+                </div>
+
+                <div class="col-12 text-center my-5 ">
+                    <button class="me-5 btn btn-danger" id="genera">Genera</button>
+                    <button class="btn btn-danger">Annulla</button>
+                </div>
+            </div>
+        </section>
+
+        <!--Biglietto-->
+        <section>
+            <div class="d-flex flex-wrap px-5">
+
+                <span class="col-12 text-center my-3">
+                    <h2>IL TUO BIGLIETTO</h2>
+                </span>
+
+                <div class="border border-black rounded d-flex flex-wrap col-12">
+                    <span class="col-4 fs-5 p-2">
+                        <p class="text-danger">Nome Passeggero</p>
+                        <p class="mt-3" id="passeggero"></p>
+                    </span>
+
+                    <span class="col-2 fs-5 border-start border-black p-2">
+                        <p class="text-danger">Offerta</p>
+                        <p class="mt-3" id="offerta"></p>
+                    </span >
+
+                    <span class="col-2 fs-5 border-start border-black p-2">
+                        <p class="text-danger">Carrozza</p>
+                        <p class="mt-3" id="carrozza"></p>
+                    </span>
+
+                    <span class="col-2 fs-5 border-start border-black p-2">
+                        <p class="text-danger">Codice CP</p>
+                        <p class="mt-3" id="codice"></p>
+                    </span>
+
+                    <span class="col-2 fs-5 border-start border-black p-2">
+                        <p class="text-danger">Prezzo</p>
+                        <p class="mt-3" id="costo"></p>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
 
     
     <script src="./js/main.js"></script>

@@ -40,6 +40,8 @@ genera.addEventListener("click",
 
        codice.innerText = Math.ceil(Math.random() * 100000);
 
+       prezzo = prezzo.toFixed(2)
+
        costo.innerText = prezzo + `€`;
     }
     )
